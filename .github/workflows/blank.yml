@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'config.bu'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Convert Butane to Ignition
+        run: podman run -i --rm quay.io/coreos/butane:release --strict < config.bu > config.ign
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Ignition
+          files: config.ign
+          tag_name: continuous
+          prerelease: true
