@@ -1,0 +1,6 @@
+variant: fcos
+version: 1.6.0
+passwd:
+  users:
+    - name: core
+      password_hash: $y$j9T$95.yEppoNVnDUm1TRjMEL/$uuVGZr50KKS3Zgkijg36bTxI.TVd28LvGIZuYXE6aqA # fedora
