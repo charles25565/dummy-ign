@@ -12,4 +12,4 @@ sudo coreos-installer install /dev/DISK --ignition-url https://tinyurl.com/dummy
 
 ## Template
 
-You can use this project as a template. Just edit `config.bu`.
+You can use this project as a template. Just edit `config.bu`, and allow workflows to write stuff.
