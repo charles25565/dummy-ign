@@ -1,12 +1,11 @@
 name: Build
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
     paths:
       - 'config.bu'
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 1 */2 *'
 jobs:
   build:
     runs-on: ubuntu-24.04
